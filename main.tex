@@ -54,7 +54,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+    \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -63,30 +63,43 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+    \item\small{
+        {#1 \vspace{-2pt}}
+    }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+\newcommand{\resumeSubheadingDesc}[6]{
+    \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+        \textbf{#1}, #2 & #3 \\
+        \textit{\small#4} {\small#5} & \textit{\small #6} 
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+        \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubDesc}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        {\small#1} & {\small #2}
+    \end{tabular*}\vspace{-20pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+        \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -95,9 +108,9 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+        \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+        \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,7 +126,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape Alessandro Baccarini} \\ \vspace{1pt}
-    \small 914-886-3901 $|$ \href{mailto:abaccarini@proton.me}{\underline{abaccarini@proton.me}} $|$ 
+    \small 914-886-3901 $|$ \href{mailto:abaccarini@proton.me}{\underline{abaccarini@proton.me}} $|$
     \href{https://www.linkedin.com/in/alessandro-baccarini/}{\underline{linkedin.com/in/alessandro-baccarini}} $|$
     \href{https://github.com/anbaccar}{\underline{github.com/anbaccar}}
 \end{center}
@@ -121,58 +134,65 @@
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University at Buffalo}{Buffalo, NY}
-      {Ph.D., Computer Science}{Aug. 2019 -- Aug. 2024}
-    \resumeSubheading
-      {Fordham University}{Bronx, NY}
-      {M.Sc., Cybersecurity}{Aug. 2017 -- May 2019}
-      \resumeSubSubheading
-      {B.Sc., Physics, Mathematics Minor}{Aug. 2013 -- May 2017}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheadingDesc
+{University at Buffalo}{Buffalo, NY}{Aug. 2019 -- Aug. 2024}
+{Ph.D., Computer Science,}{Advisor: Marina Blanton}{}
+\resumeItemListStart
+\resumeItem{Dissertation: \emph{New Directions in Multi-Party Computation Techniques and Information Disclosure Evaluation for Data Analytics}}
+\resumeItemListEnd
+% \resumeSubSubDesc
+% {Advised by Marina Blanton}{}
+% \resumeSubSubDesc
+% {Dissertation: New Directions in Multi-Party Computation Techniques and Information Disclosure Evaluation for Data Analytics}{}
+\resumeSubheadingDesc
+{Fordham University}{Bronx, NY}{Aug. 2017 -- May 2019}
+{M.Sc., Cybersecurity,}{Advisor: Thaier Hayajneh}{}
+\resumeSubSubheading
+{B.Sc., Physics, Mathematics Minor}{}
+\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Doctoral Researcher}{January 2010 -- Present}
-      {University at Buffalo}{Buffalo, NY}
-      \resumeItemListStart
-            % \resumeItem{Primary maintainer}
-            % \resumeItem{Incorporated new techniques }
-            % \resumeItem{Optimized existing code}
-            % \resumeItem{Major refactoring in order to support future maintainability and extensibility}
-        \resumeItem{}
-        \resumeItem{}
-        \resumeItem{}
-        \resumeItem{}
-        \resumeItem{}
-        \resumeItem{}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
+\resumeSubheading
+{Doctoral Researcher, University at Buffalo}{Jan. 2020 -- Present}
+{Secure Multi-Party Computation}{}
+% % {PICCO Compiler}{University at Buffalo}
+% % Throughout my Ph.D., I have worked in the following areas:
+% \resumeSubSubheading
+% % {PICCO Compiler}{Jan 2020 - Present}
+% {Secure Multi-Party Computation}{}
+\resumeItemListStart
+\resumeItem{Designed and implemented state-of-the-art multi-party protocols based on replicated secret sharing and obtained a factor of up to $33 \times $ gain in performance.}
+\resumeItem{Core maintainer of \emph{PICCO}, a source-to-source compiler used to translate general-purpose programs into their secure implementations for deployment in a distributed setting. }
+\resumeItem{Extensively optimized existing protocol implementations in conjunction with performing a large-scale refactor in order to support future maintainability and extensibility and integration of new techniques.}
+\resumeItem{Cutting-edge cryptographic techniques in secure multi-party computation.}
+\resumeItem{Designed a new optimization technique for secure inference of quantized neural networks, yielding an over $2\times$ improvement over prior solutions.}
+\resumeItem{Mentored }
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Graduate Research Assistant}{August 2017 -- May 2019}
-      {Fordham University}{Bronx, NY}
-      \resumeItemListStart
-        \resumeItem{}
-        \resumeItem{}
-        \resumeItem{}
-      \resumeItemListEnd
+\resumeSubSubheading
+% {Information Theoretic Analysis of Secure Computation}{Jan 2021 - Present}
+{Disclosure Analysis from Secure Function Evaluation}{}
+\resumeItemListStart
+\resumeItem{Devised a novel technique for evaluating information disclosure from secure function evaluation based on entropy.}
+\resumeItem{Performed analytical and simulation based analysis on a suite of descriptive statistical functions.}
+\resumeItemListEnd
+% \resumeSubHeadingListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubheading
+{Graduate Research Assistant, Fordham University}{August 2017 -- May 2019}
+{}{}
+\resumeItemListStart
+\resumeItem{Blockchain in healthcare}
+\resumeItem{Led the design for our smart}
+\resumeItem{}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 % %-----------PROJECTS-----------
@@ -205,23 +225,23 @@
 
 %-----------Publications-----------
 \section{Publications}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Conference Proceedings}}{}
-          \resumeItemListStart
-        \resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou, ``Understanding Information Disclosure from Secure Computation Output: A Study of Average Salary Computation.'' \emph{CODASPY}, 2024.}
-        \resumeItem{\textbf{A. Baccarini}, M. Blanton, C. Yuan, ``Multi-Party Replicated Secret Sharing over a Ring with Applications to Privacy-Preserving Machine Learning.'' \emph{Privacy Enhancing Technologies Symposium (PETS)} and \emph{Proceedings on Privacy Enhancing Technologies (PoPETs)}, Vol. 2023, No. 1, 2023. }
-        \resumeItem{\textbf{A. Baccarini}, T. Hayajneh, ``Evolution of Format Preserving Encryption on IoT Devices: FF1+.'' \href{https://scholarspace.manoa.hawaii.edu/handle/10125/59603}{HICCS, 2019.}}
-      \resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, T. Hayajneh,  ``Quality of Service Analysis of VoIP Services.''  \emph{IEEE UEMCON}, 2018.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Refereed Journals}}{}
-          \resumeItemListStart
-        \resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou,  ``Understanding Information Disclosure from Secure Computation Output: A Comprehensive Study of Average Salary Computation.''  \emph{Under submission}.}
-        \resumeItem{K.N. Griggs, O. Ossipova, C.P. Kohlios, \textbf{A. Baccarini}, E.A. Howson, T. Hayajneh, ``Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.'' \href{https://link.springer.com/article/10.1007/s10916-018-0982-x}{\emph{J Med Syst}, 42: 130. 2018.} }
-        \resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, G.M. Weiss, T. Hayajneh, A.  Farajidavar,   ``Biometric Authentication and Verification for Medical Cyber Physical Systems.'' \href{https://www.mdpi.com/2079-9292/7/12/436}{\emph{Electronics}, 7(12), 436. 2018.}}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Conference Proceedings}}{}
+\resumeItemListStart
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou, ``Understanding Information Disclosure from Secure Computation Output: A Study of Average Salary Computation.'' \emph{CODASPY}, 2024.}
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, C. Yuan, ``Multi-Party Replicated Secret Sharing over a Ring with Applications to Privacy-Preserving Machine Learning.'' \emph{Privacy Enhancing Technologies Symposium (PETS)} and \emph{Proceedings on Privacy Enhancing Technologies (PoPETs)}, Vol. 2023, No. 1, 2023. }
+\resumeItem{\textbf{A. Baccarini}, T. Hayajneh, ``Evolution of Format Preserving Encryption on IoT Devices: FF1+.'' \href{https://scholarspace.manoa.hawaii.edu/handle/10125/59603}{HICSS, 2019.}}
+\resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, T. Hayajneh,  ``Quality of Service Analysis of VoIP Services.''  \emph{IEEE UEMCON}, 2018.}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{Refereed Journals}}{}
+\resumeItemListStart
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou,  ``Understanding Information Disclosure from Secure Computation Output: A Comprehensive Study of Average Salary Computation.''  \emph{Under submission}.}
+\resumeItem{K.N. Griggs, O. Ossipova, C.P. Kohlios, \textbf{A. Baccarini}, E.A. Howson, T. Hayajneh, ``Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.'' \href{https://link.springer.com/article/10.1007/s10916-018-0982-x}{\emph{J Med Syst}, 42: 130. 2018.} }
+\resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, G.M. Weiss, T. Hayajneh, A.  Farajidavar,   ``Biometric Authentication and Verification for Medical Cyber Physical Systems.'' \href{https://www.mdpi.com/2079-9292/7/12/436}{\emph{Electronics}, 7(12), 436. 2018.}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
 
@@ -229,14 +249,15 @@
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C/C++, Python, Bash, Lua, Latex} \\
-     % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, SVN, Neovim, VS Code } \\
-     \textbf{Libraries}{:  GNU MP and MPFR, NumPy, Matplotlib, TensorFlow}
-    }}
- \end{itemize}
+          \textbf{Cryptographic Techniques}{: secure multi-party computation, secret sharing, private and public key cryptography, private set intersection} \\
+          \textbf{Languages}{: C/C++, Python, Bash, Lua, Latex} \\
+          % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+          \textbf{Developer Tools}{: Git, SVN, Neovim, VS Code } \\
+          \textbf{Libraries}{:  GNU MP and MPFR, NumPy, Matplotlib, TensorFlow}
+          }}
+\end{itemize}
 
 
 %-------------------------------------------
