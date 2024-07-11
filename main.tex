@@ -9,16 +9,19 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+% \usepackage[colorlinks=true]{hyperref}
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.7}
+\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+
 \usepackage{fancyhdr}
+\usepackage{inconsolata}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+ 
 % \usepackage[sfdefault,lining,light]{FiraSans}
 % \usepackage[sfdefault,lining]{FiraSans}
 % \usepackage{noto}
-
-
-\input{glyphtounicode}
 
 
 %----------FONT OPTIONS----------
@@ -29,8 +32,7 @@
 % \usepackage[default]{sourcesanspro}
 
 % serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -72,7 +74,7 @@
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1}, #2 & #3 \\
-        \textit{\small#4} {\small#5} & \textit{\small #6} 
+        \textit{\small#4} {\small#5} & {\small #6} 
     \end{tabular*}\vspace{-7pt}
 }
 \newcommand{\resumeSubheading}[4]{
@@ -86,7 +88,7 @@
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-        \textit{\small#1} & \textit{\small #2} \\
+        \textit{\small#1} & {\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 \newcommand{\resumeSubSubDesc}[2]{
@@ -107,9 +109,9 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.10in, label={}]}
         \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.20in]}
         \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -118,18 +120,20 @@
 
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
     \textbf{\Huge \scshape Alessandro Baccarini} \\ \vspace{1pt}
-    \small 914-886-3901 $|$ \href{mailto:abaccarini@proton.me}{\underline{abaccarini@proton.me}} $|$
-    \href{https://www.linkedin.com/in/alessandro-baccarini/}{\underline{linkedin.com/in/alessandro-baccarini}} $|$
-    \href{https://github.com/anbaccar}{\underline{github.com/anbaccar}}
+    \small \href{tel:19148863901}{\faicon{phone} +1 914 886 3901}  
+    $|$
+    \href{mailto:abaccarini@proton.me}{{\faicon{inbox} abaccarini@proton.me}} 
+    $|$
+    \href{https://abaccarini.github.io/}{{\faicon{globe} \url{abaccarini.github.io}}} 
+    $|$
+    \href{https://www.linkedin.com/in/alessandro-baccarini/}{{\faicon{linkedin} LinkedIn}} 
+    % $|$
+    % \href{https://github.com/abaccarini}{{\faicon{github-alt} GitHub (\texttt{abaccarini})}}
 \end{center}
+
+
 
 
 %-----------EDUCATION-----------
@@ -139,17 +143,18 @@
 {University at Buffalo}{Buffalo, NY}{Aug. 2019 -- Aug. 2024}
 {Ph.D., Computer Science,}{Advisor: Marina Blanton}{}
 \resumeItemListStart
-\resumeItem{Dissertation: \emph{New Directions in Multi-Party Computation Techniques and Information Disclosure Evaluation for Data Analytics}}
+\resumeItem{Dissertation: \emph{New Directions in Secure Multi-Party Computation: Techniques and Information Disclosure Analysis}}
 \resumeItemListEnd
 % \resumeSubSubDesc
 % {Advised by Marina Blanton}{}
 % \resumeSubSubDesc
 % {Dissertation: New Directions in Multi-Party Computation Techniques and Information Disclosure Evaluation for Data Analytics}{}
 \resumeSubheadingDesc
-{Fordham University}{Bronx, NY}{Aug. 2017 -- May 2019}
-{M.Sc., Cybersecurity,}{Advisor: Thaier Hayajneh}{}
+{Fordham University}{Bronx, NY}{Aug. 2013 -- May 2019}
+{M.S., Cybersecurity,}{Advisor: Thaier Hayajneh}{}
+% {M.Sc., Cybersecurity}{}{2019}
 \resumeSubSubheading
-{B.Sc., Physics, Mathematics Minor}{}
+{B.S., Physics, Mathematics Minor}{}
 \resumeSubHeadingListEnd
 
 
@@ -157,89 +162,71 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
-{Doctoral Researcher, University at Buffalo}{Jan. 2020 -- Present}
-{Secure Multi-Party Computation}{}
+\resumeSubheadingDesc
+{Doctoral Researcher}{University at Buffalo}{Jan. 2020 -- Present}
+{Secure Multi-Party Computation and Privacy-Preserving Machine Learning}{}{
+    \href{https://github.com/anbaccar/RSS_ring_ppml}{{Repository}}
+}
 % % {PICCO Compiler}{University at Buffalo}
 % % Throughout my Ph.D., I have worked in the following areas:
 % \resumeSubSubheading
 % % {PICCO Compiler}{Jan 2020 - Present}
 % {Secure Multi-Party Computation}{}
 \resumeItemListStart
-\resumeItem{Designed and implemented state-of-the-art multi-party protocols based on replicated secret sharing and obtained a factor of up to $33 \times $ gain in performance.}
-\resumeItem{Core maintainer of \emph{PICCO}, a source-to-source compiler used to translate general-purpose programs into their secure implementations for deployment in a distributed setting. }
-\resumeItem{Extensively optimized existing protocol implementations in conjunction with performing a large-scale refactor in order to support future maintainability and extensibility and integration of new techniques.}
-\resumeItem{Cutting-edge cryptographic techniques in secure multi-party computation.}
-\resumeItem{Designed a new optimization technique for secure inference of quantized neural networks, yielding an over $2\times$ improvement over prior solutions.}
-\resumeItem{Mentored }
+\resumeItem{Designed and implemented a comprehensive framework of state-of-the-art multi-party protocols based on replicated secret sharing, resulting in an up to $33 \times $ performance gain over existing secret sharing techniques.}
+% \resumeItem{Cutting-edge cryptographic techniques in secure multi-party computation.}
+\resumeItem{Applied our framework to several privacy-preserving machine learning tasks, and discovered a new optimization technique for secure quantized neural network inference, leading to a $2\times$ improvement over prior works.}
+% \resumeItem{Implemented protocol suite in C++, later on merging the framework into the PICCO compiler.}
 \resumeItemListEnd
-
 \resumeSubSubheading
-% {Information Theoretic Analysis of Secure Computation}{Jan 2021 - Present}
-{Disclosure Analysis from Secure Function Evaluation}{}
+{PICCO Compiler}{
+    \href{https://github.com/applied-crypto-lab/picco}{{Repository}}
+}
 \resumeItemListStart
-\resumeItem{Devised a novel technique for evaluating information disclosure from secure function evaluation based on entropy.}
-\resumeItem{Performed analytical and simulation based analysis on a suite of descriptive statistical functions.}
+\resumeItem{Core maintainer of \emph{PICCO}, a source-to-source compiler used to translate general-purpose programs into their secure implementations for deployment in a distributed setting.}
+\resumeItem{Integrated novel techniques o}
+\resumeItem{Extensively optimized existing protocol implementations, while simultaneously performing a large-scale refactor in order to support future maintainability and extensibility.}
+% \resumeItem{Integrated replicated secret sharing framework into the compiler.}
+% \resumeItem{Mentored undergraduate student on network-level optimizations.}
 \resumeItemListEnd
-% \resumeSubHeadingListEnd
-
-\resumeSubheading
-{Graduate Research Assistant, Fordham University}{August 2017 -- May 2019}
-{}{}
+\resumeSubSubheading
+{Disclosure Analysis from Secure Function Evaluation}{
+\href{https://github.com/anbaccar/estimators}{{Repository}}
+}
 \resumeItemListStart
-\resumeItem{Blockchain in healthcare}
-\resumeItem{Led the design for our smart}
-\resumeItem{}
+\resumeItem{Developed a novel approach for evaluating private information disclosure from secure function evaluation based on information-theoretic principles.}
+\resumeItem{Performed both analytical and simulation-based analysis on a variety of descriptive statistical functions.}
+\resumeItem{Awarded first place \$2000 cash prize from the Alan Selman Scholarship for theoretical computer science for this work.}
+\resumeItemListEnd
+
+\resumeSubheadingDesc
+{Graduate Research Assistant}{Fordham University}{Aug. 2017 -- May 2019}
+{Blockchain Applications in Healthcare}{}{}
+\resumeItemListStart
+\resumeItem{Led the design on one of the earliest frameworks that fused blockchain and healthcare together into an IoT remote patient monitoring system based on the Ethereum protocol.}
+\resumeItem{Assisted in prototype smart contract development in Solidity to support real-time automated monitoring.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 
-% %-----------PROJECTS-----------
-% \section{Projects}
-%     \resumeSubHeadingListStart
-%       \resumeProjectHeading
-%           {\textbf{PICCO} $|$ \emph{C++, C, Bash}}{August 2022 -- Present}
-%           \resumeItemListStart
-%             \resumeItem{Primary maintainer}
-%             \resumeItem{Incorporated new techniques }
-%             \resumeItem{Optimized existing code}
-%             \resumeItem{Major refactoring in order to support future maintainability and extensibility}
-%           \resumeItemListEnd
-%       % \resumeProjectHeading
-%       %     {\textbf{RSS PPML} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-%       %     \resumeItemListStart
-%       %   \resumeItem{}
-%       %   \resumeItem{}
-%       %   \resumeItem{}
-%       %     \resumeItemListEnd
-%       \resumeProjectHeading
-%           {\textbf{Information Theory Analysis} $|$ \emph{C++, Python}}{January 2021 -- Current}
-%           \resumeItemListStart
-%         \resumeItem{}
-%         \resumeItem{}
-%         \resumeItem{}
-%           \resumeItemListEnd
-%     \resumeSubHeadingListEnd
-
-
 %-----------Publications-----------
-\section{Publications}
+\section{Selected Publications}
 \resumeSubHeadingListStart
 \resumeProjectHeading
 {\textbf{Conference Proceedings}}{}
 \resumeItemListStart
-\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou, ``Understanding Information Disclosure from Secure Computation Output: A Study of Average Salary Computation.'' \emph{CODASPY}, 2024.}
-\resumeItem{\textbf{A. Baccarini}, M. Blanton, C. Yuan, ``Multi-Party Replicated Secret Sharing over a Ring with Applications to Privacy-Preserving Machine Learning.'' \emph{Privacy Enhancing Technologies Symposium (PETS)} and \emph{Proceedings on Privacy Enhancing Technologies (PoPETs)}, Vol. 2023, No. 1, 2023. }
-\resumeItem{\textbf{A. Baccarini}, T. Hayajneh, ``Evolution of Format Preserving Encryption on IoT Devices: FF1+.'' \href{https://scholarspace.manoa.hawaii.edu/handle/10125/59603}{HICSS, 2019.}}
-\resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, T. Hayajneh,  ``Quality of Service Analysis of VoIP Services.''  \emph{IEEE UEMCON}, 2018.}
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou, ``Understanding Information Disclosure from Secure Computation Output: A Study of Average Salary Computation.'' \href{https://dl.acm.org/doi/abs/10.1145/3626232.3653280}{\emph{ACM CODASPY}, 2024.}}
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, C. Yuan, ``Multi-Party Replicated Secret Sharing over a Ring with Applications to Privacy-Preserving Machine Learning.'' \href{https://petsymposium.org/2023/}{\emph{Privacy Enhancing Technologies Symposium (PETS)} }and \href{https://petsymposium.org/popets/2023/popets-2023-0035.php}{\emph{Proceedings on Privacy Enhancing Technologies (PoPETs)}, Vol. 2023, No. 1, 2023. }}
+% \resumeItem{\textbf{A. Baccarini}, T. Hayajneh, ``Evolution of Format Preserving Encryption on IoT Devices: FF1+.'' \href{https://scholarspace.manoa.hawaii.edu/handle/10125/59603}{\emph{HICSS}, 2019.}}
+% \resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, T. Hayajneh,  ``Quality of Service Analysis of VoIP Services.''  \emph{IEEE UEMCON}, 2018.}
 \resumeItemListEnd
 \resumeProjectHeading
 {\textbf{Refereed Journals}}{}
 \resumeItemListStart
-\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou,  ``Understanding Information Disclosure from Secure Computation Output: A Comprehensive Study of Average Salary Computation.''  \emph{Under submission}.}
-\resumeItem{K.N. Griggs, O. Ossipova, C.P. Kohlios, \textbf{A. Baccarini}, E.A. Howson, T. Hayajneh, ``Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.'' \href{https://link.springer.com/article/10.1007/s10916-018-0982-x}{\emph{J Med Syst}, 42: 130. 2018.} }
+\resumeItem{\textbf{A. Baccarini}, M. Blanton, S. Zou,  ``Understanding Information Disclosure from Secure Computation Output: A Comprehensive Study of Average Salary Computation.''  \emph{ACM Transactions on Privacy and Security (TOPS)}, to appear.}
 \resumeItem{A. Alhayajneh, \textbf{A. Baccarini}, G.M. Weiss, T. Hayajneh, A.  Farajidavar,   ``Biometric Authentication and Verification for Medical Cyber Physical Systems.'' \href{https://www.mdpi.com/2079-9292/7/12/436}{\emph{Electronics}, 7(12), 436. 2018.}}
+\resumeItem{K.N. Griggs, O. Ossipova, C.P. Kohlios, \textbf{A. Baccarini}, E.A. Howson, T. Hayajneh, ``Healthcare Blockchain System Using Smart Contracts for Secure Automated Remote Patient Monitoring.'' \href{https://link.springer.com/article/10.1007/s10916-018-0982-x}{\emph{J Med Syst}, 42: 130. 2018.} }
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -251,11 +238,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-          \textbf{Cryptographic Techniques}{: secure multi-party computation, secret sharing, private and public key cryptography, private set intersection} \\
-          \textbf{Languages}{: C/C++, Python, Bash, Lua, Latex} \\
-          % \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+          \textbf{Cryptographic Techniques}{: secure multi-party computation, secret sharing, differential privacy, private set intersection} \\
+          \textbf{Languages}{: C/C++, Python, Bash, Lua, \LaTeX} \\
           \textbf{Developer Tools}{: Git, SVN, Neovim, VS Code } \\
-          \textbf{Libraries}{:  GNU MP and MPFR, NumPy, Matplotlib, TensorFlow}
+          \textbf{Libraries}{: GNU MP and MPFR, OpenSSL, NumPy, SciPy, Matplotlib, TensorFlow}
           }}
 \end{itemize}
 

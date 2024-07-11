@@ -1,0 +1,79 @@
+\documentclass[12pt]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{charter}
+\usepackage{marvosym}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.8}
+\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+
+\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage{fancyhdr}
+\usepackage{inconsolata}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+ 
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\definecolor{gr}{RGB}{225,225,225}
+
+\input{info}
+
+\begin{document}
+
+% % Shaded header banner
+% \AddToShipoutPictureBG{%
+% \color{gr}
+% \AtPageUpperLeft{\rule[-1.3in]{\paperwidth}{1.3in}}
+% }
+
+% Header
+
+\begin{center}
+    \textbf{\Huge \scshape Alessandro Baccarini} \\ \vspace{1pt}
+    \small \href{tel:19148863901}{\faicon{phone} +1 914 886 3901}  
+    $|$
+    \href{mailto:abaccarini@proton.me}{{\faicon{inbox} abaccarini@proton.me}} 
+    $|$
+    \href{https://abaccarini.github.io/}{{\faicon{globe} \url{abaccarini.github.io}}} 
+    $|$
+    \href{https://www.linkedin.com/in/alessandro-baccarini/}{{\faicon{linkedin} LinkedIn}} 
+    % $|$
+    % \href{https://github.com/abaccarini}{{\faicon{github-alt} GitHub (\texttt{abaccarini})}}
+\end{center}
+
+
+
+
+\vspace{0.8in}
+
+% Opening block
+\today\\
+
+\vspace{-0.1in}\recipient\\
+\company\\
+% \street\\
+% \city, \state\ \zip\\
+
+\vspace{-0.1in}\greeting\ \recipient,\\
+
+% Body
+\vspace{-0.1in}\setlength\parindent{24pt}
+\noindent\input{body}
+
+\vspace{0.1in}
+% \vfill
+
+\begin{flushright}
+\closer,\\
+% \vspace{-0.1in}\includegraphics[width=1.5in]{sig.png}\vspace{-0.1in}
+\myname\\
+\mytitle
+\end{flushright}
+
+\end{document}
